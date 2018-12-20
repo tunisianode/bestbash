@@ -5,31 +5,31 @@ function proxyon() {
     #read -s -p "Input IITK password: " password
     #gsettings set org.gnome.system.proxy.http authentication-user $username
     #gsettings set org.gnome.system.proxy.http authentication-password $password
-    if [[ $1 == -i ]]; then
-      gsettings set org.gnome.system.proxy mode 'manual'
-      gsettings set org.gnome.system.proxy.http host 'ironport2.iitk.ac.in'
-      gsettings set org.gnome.system.proxy.https host 'ironport2.iitk.ac.in'
-      gsettings set org.gnome.system.proxy ignore-hosts "['localhost', '127.0.0.0/8', '::1']"
-      echo "Proxy to ironport2.iitk.ac.in is set."
-    else
-      gsettings set org.gnome.system.proxy mode 'manual'
-      gsettings set org.gnome.system.proxy.http host 'vsnlproxy.iitk.ac.in'
-      gsettings set org.gnome.system.proxy.https host 'vsnlproxy.iitk.ac.in'
-      gsettings set org.gnome.system.proxy.https port 3128
-      gsettings set org.gnome.system.proxy ignore-hosts "['localhost', '127.0.0.0/8', '::1', '*.iitk.ac.in', '172.*.*.*','iitk.ac.in']"
-      echo "Proxy to vsnlproxy.iitk.ac.in is set."
-    fi
-      gsettings set org.gnome.system.proxy.http port 3128
-      gsettings set org.gnome.system.proxy.https port 3128
-#    gsettings set org.gnome.system.proxy.ftp host '10.0.0.1'
+    #if [[ $1 == -i ]]; then
+    #  gsettings set org.gnome.system.proxy mode 'manual'
+    #  gsettings set org.gnome.system.proxy.http host 'ironport2.iitk.ac.in'
+    #  gsettings set org.gnome.system.proxy.https host 'ironport2.iitk.ac.in'
+    #  gsettings set org.gnome.system.proxy ignore-hosts "['localhost', '127.0.0.0/8', '::1']"
+    #  echo "Proxy to ironport2.iitk.ac.in is set."
+    #else
+    #  gsettings set org.gnome.system.proxy mode 'manual'
+    #  gsettings set org.gnome.system.proxy.http host 'vsnlproxy.iitk.ac.in'
+    #  gsettings set org.gnome.system.proxy.https host 'vsnlproxy.iitk.ac.in'
+    #  gsettings set org.gnome.system.proxy.https port 3128
+    #  gsettings set org.gnome.system.proxy ignore-hosts "['localhost', '127.0.0.0/8', '::1', '*.iitk.ac.in', '172.*.*.*','iitk.ac.in']"
+    #  echo "Proxy to vsnlproxy.iitk.ac.in is set."
+    #fi
+    #  gsettings set org.gnome.system.proxy.http port 3128
+    #  gsettings set org.gnome.system.proxy.https port 3128
+#   # gsettings set org.gnome.system.proxy.ftp host '10.0.0.1'
 #    gsettings set org.gnome.system.proxy.ftp port 8080
 }
 
 function proxyoff() {
-     gsettings set org.gnome.system.proxy mode 'none'
+#     gsettings set org.gnome.system.proxy mode 'none'
 #     gsettings set org.gnome.system.proxy.http authentication-user ''
 #     gsettings set org.gnome.system.proxy.http authentication-password ''
-     echo "Proxy disabled."
+#     echo "Proxy disabled."
 }
 #}}}
 
